@@ -447,7 +447,66 @@ a.header-menu-item.active {
     media screen : 1px ~ 600px
 *********************************************/
 @media screen and (max-width:600px){
+    .header {
+        flex-direction: column;
+        align-items: start;
+    }
+    ul.header-menu { /* .header-menu 정의시 스타일 적용 안됨 */
+        display: none;
+    }
+    .header-toggle {
+        display: block;
+    }
+    section { 
+        padding: 3rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    #home {
+        padding: 5rem 3rem;
+    }
+    .home-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    .majors {
+        flex-direction: column;
+        align-items: center;
+    }
+    .major {
+        width: 30rem;
+    }
+    .job {
+        justify-content: center;
+    }
+    .skills {
+        border: 1px solid red;
+        grid-template-columns: 1fr;
+    }
+    .categories {
+        flex-direction: column;
+    }
+    .category {
+        width: 80%;
+    }
     .projects {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .testimonial {
+        flex-direction: column;
+    }
+    .testimonial:nth-child(even) .testimonial-img {
+        order: 0;
+    }
+    .arrow-up {
+        bottom: 1rem;
+        right: 1.5rem;
+        font-size: 2rem;
+        width: 3rem;
+        height: 3rem;
     }
 }
